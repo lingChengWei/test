@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>
+        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      margin-top: 0px;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background-color: #f7f7f8;
+      overflow-x: hidden;
+    }
+    /* app内样式是绝对定位＋水平居中,能够实现页面缩小后居于中间**/
+    #app {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background-color: #f7f7f8;
+    }
+
+    .el-table {
+      /* 取消overflow 设置， 为table header 粘性布局 */
+      overflow: unset !important;
+    }
+    /* header粘性布局 */
+    .el-table__header-wrapper {
+      position: sticky;
+      top: 65px; /* 按照自己的需求设置 */
+      z-index: 3;
+    }
+    .el-table th.el-table__cell {
+      background-color: #f5f7fa !important;
+    }
+  </style>
+</html>
